@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ConectaChat</title>
+
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+    <main class="chat-container">
+
+        <!-- TELA DE ESCOLHA DO NICKNAME -->
+        <section id="login-screen">
+
+            <header>
+                <h1>ConectaChat</h1>
+                <p>Escolha seu nickname e comece a conversar.</p>
+            </header>
+
+            <form id="nickname-form">
+
+                <label for="nickname-input">
+                    Seu nickname
+                </label>
+
+                <input
+                    type="text"
+                    id="nickname-input"
+                    placeholder="Digite seu nickname..."
+                    minlength="3"
+                    maxlength="20"
+                    autocomplete="off"
+                    required
+                >
+
+                <button type="submit">
+                    Entrar no chat
+                </button>
+
+            </form>
+
+            <p id="nickname-error" role="alert"></p>
+
+        </section>
+
+        <!-- INTERFACE PRINCIPAL DO CHAT -->
+        <section id="chat-screen">
+
+            <header>
+                <h1>ConectaChat</h1>
+                <p>Converse em tempo real, de forma simples e rápida.</p>
+            </header>
+
+            <!-- ÁREA DAS MENSAGENS -->
+            <section
+                id="messages"
+                aria-label="Mensagens do chat"
+            >
+                <p id="empty-message">
+                    As mensagens aparecerão aqui.
+                </p>
+            </section>
+
+            <!-- FORMULÁRIO DE ENVIO -->
+            <form id="chat-form">
+
+                <input
+                    type="text"
+                    id="message-input"
+                    placeholder="Digite sua mensagem..."
+                    autocomplete="off"
+                    required
+                >
+
+                <button
+                    type="submit"
+                    id="send-button"
+                >
+                    Enviar
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <script src="/script.js"></script>
+
+</body>
+</html>

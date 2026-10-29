@@ -1,0 +1,227 @@
+
+/* CONFIGURAÇÕES GERAIS */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+    color: #1e293b;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* CONTAINER PRINCIPAL */
+
+.chat-container {
+    width: 100%;
+    max-width: 700px;
+    background-color: #ffffff;
+    padding: 28px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+/* CABEÇALHO */
+
+header {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+header h1 {
+    margin: 0 0 12px;
+    font-size: 28px;
+}
+
+header p {
+    margin: 0;
+    color: #64748b;
+}
+
+/* TELA DE NICKNAME */
+
+#login-screen {
+    display: block;
+}
+
+#nickname-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+#nickname-form label {
+    font-weight: bold;
+}
+
+#nickname-input {
+    padding: 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+#nickname-form button {
+    padding: 14px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#nickname-form button:hover {
+    background-color: #1d4ed8;
+}
+
+#nickname-error {
+    color: #dc2626;
+    font-size: 13px;
+    margin-top: 12px;
+}
+
+/* CHAT OCULTO INICIALMENTE */
+
+#chat-screen {
+    display: none;
+    width: 100%;
+}
+
+/* ÁREA DE MENSAGENS */
+
+#messages {
+    height: 350px;
+    overflow-y: auto;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#empty-message {
+    color: #64748b;
+}
+
+/* BALÕES DE MENSAGENS */
+
+.mensagem-chat {
+    max-width: 78%;
+    width: fit-content;
+    padding: 12px 16px;
+    border-radius: 14px;
+    overflow-wrap: anywhere;
+}
+
+.mensagem-chat strong {
+    display: block;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.mensagem-chat p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.outra-mensagem {
+    align-self: flex-start;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+}
+
+.minha-mensagem {
+    align-self: flex-end;
+    background-color: #2563eb;
+    color: #ffffff;
+}
+
+.minha-mensagem strong {
+    color: #bfdbfe;
+}
+
+/* NOTIFICAÇÕES DO SISTEMA */
+
+.mensagem-sistema {
+    align-self: center;
+    max-width: 90%;
+    background-color: #e2e8f0;
+    color: #64748b;
+    border-radius: 20px;
+    padding: 7px 12px;
+    font-size: 12px;
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+/* FORMULÁRIO DE ENVIO */
+
+#chat-form {
+    display: flex;
+    gap: 12px;
+}
+
+#message-input {
+    flex: 1;
+    min-width: 0;
+    padding: 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+#send-button {
+    padding: 14px 24px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#send-button:hover {
+    background-color: #1d4ed8;
+}
+
+#send-button:disabled {
+    background-color: #94a3b8;
+    cursor: not-allowed;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 600px) {
+    body {
+        padding: 12px;
+    }
+
+    .chat-container {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    .mensagem-chat {
+        max-width: 90%;
+    }
+
+    #send-button {
+        padding: 12px 16px;
+    }
+}
