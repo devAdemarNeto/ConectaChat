@@ -51,7 +51,7 @@ Ter o Node.js e o npm instalados.
 Clone o repositório:
 
 ```bash
-git clone URL_DO_REPOSITORIO
+git clone https://github.com/devAdemarNeto/ConectaChat.git
 ```
 
 Acesse a pasta:
