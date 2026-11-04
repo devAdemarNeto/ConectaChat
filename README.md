@@ -25,6 +25,45 @@ O ConectaChat permite que vários usuários conversem simultaneamente por meio d
 - Node.js
 - Biblioteca ws
 
+
+## Arquitetura e funcionamento
+
+O ConectaChat utiliza uma arquitetura cliente-servidor, com comunicação em tempo real por meio do protocolo WebSocket.
+
+### Backend
+
+O servidor foi desenvolvido em Node.js, utilizando a biblioteca `ws` para gerenciar conexões WebSocket.
+
+Principais responsabilidades:
+
+- Gerenciar conexões dos participantes.
+- Validar nicknames e impedir duplicidades.
+- Receber e validar mensagens em formato JSON.
+- Distribuir mensagens entre os participantes conectados.
+- Notificar entradas e desconexões.
+
+### Frontend
+
+A interface foi desenvolvida com HTML, CSS e JavaScript.
+
+Principais responsabilidades:
+
+- Permitir a identificação do usuário.
+- Estabelecer comunicação WebSocket com o servidor.
+- Enviar e exibir mensagens em tempo real.
+- Exibir notificações de entrada e saída.
+- Atualizar dinamicamente a interface do chat.
+
+### Fluxo de comunicação
+
+1. O usuário acessa a aplicação pelo navegador.
+2. O frontend estabelece uma conexão WebSocket.
+3. O usuário informa um nickname.
+4. O backend valida e registra o participante.
+5. As mensagens são enviadas ao servidor.
+6. O servidor distribui as mensagens aos participantes conectados.
+
+
 ## Estrutura do projeto
 
 ```text
