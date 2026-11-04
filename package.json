@@ -1,12 +1,18 @@
+
 {
-  "name": "websocket-chat",
+  "name": "conectachat",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Chat em tempo real utilizando Node.js, JavaScript e WebSocket.",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js"
   },
-  "keywords": [],
+  "keywords": [
+    "nodejs",
+    "javascript",
+    "websocket",
+    "chat"
+  ],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
