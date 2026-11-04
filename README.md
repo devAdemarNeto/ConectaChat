@@ -69,7 +69,7 @@ npm install
 Inicie o servidor:
 
 ```bash
-node server.js
+npm start
 ```
 
 Abra no navegador:
